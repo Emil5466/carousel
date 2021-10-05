@@ -35,9 +35,4 @@ function moveToNextSlide() {
 
 
 
-let x = document.getElementById("carousel__button--prev");
-if (slidePosition === 2) {
-  x.style.display = "block";
-} else {
-  x.style.display = "none";
-}
+
