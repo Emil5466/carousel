@@ -52,10 +52,6 @@
   padding-top: 20px;
 }
 
-.carousel .carousel__item,
-.carousel .carousel__item--hidden {
-  display: none;
-}
 
 .carousel .carousel__item img {
   width: 100%;
@@ -68,32 +64,34 @@
 
 .carousel .carousel__item h1 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 25px;
   color: #333;
   padding-top: 20px;
 }
 
 .carousel .carousel__item h2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 30px;
   color: black;
 }
 
 .carousel .carousel__item p {
   text-align: center;
-  font-size: 1.5rem;
-  padding: 20px 70px;
+  font-size: 10px;
+  padding: 20px 50px;
   color: #333;
 }
 
-.carousel .carousel__item--visible {
-  display: block;
-  animation: fadeVisibility 0.5s;
-}
-
-
 
 .carousel .carousel__actions {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  position: absolute;
+  top: 80%;
+}
+
+.carousel .carousel__actions-skip {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -102,7 +100,19 @@
 }
 
 .carousel .carousel__actions button {
-  border-radius: 30px;
+  border-radius: 10px;
+  border: 0;
+  font-weight: bold;
+  cursor: pointer;
+  width: 80px;
+  height: 40px;
+  background-color: black;
+  color:white;
+  
+}
+
+.carousel .carousel__actions-skip button {
+  border-radius: 10px;
   border: 0;
   font-weight: bold;
   cursor: pointer;
@@ -112,22 +122,11 @@
   color:white;
 }
 
-.carousel .carousel__actions button#carousel__button--prev {
+
+.carousel .carousel__actions button#carousel__button--prev, .carousel .carousel__actions-skip button#carousel__button--prev {
   margin-left: 40px;
 }
 
-.carousel .carousel__actions button#carousel__button--next {
+.carousel .carousel__actions button#carousel__button--next, .carousel .carousel__actions-skip button#carousel__button--next {
   margin-right: 40px;
-}
-
-
-
-@keyframes fadeVisibility {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: opacity linear;
-  }
 }
